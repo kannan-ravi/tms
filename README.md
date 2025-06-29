@@ -8,7 +8,6 @@
 - [Installation](#installation)
 - [Environment Variables](#environment-variables)
 - [Usage](#usage)
-- [API Endpoints](#api-endpoints)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -16,13 +15,12 @@
 
 ## About
 
-TMS (Task Management System) is a full-stack web application that enables users to create, manage, and track tasks efficiently. The system includes real-time updates via WebSockets and a Kanban board for visual task organization.
+TMS (Task Management System) is a full-stack web application that enables users to create, manage, and track tasks efficiently. The system includes real-time updates via WebSockets for task organization.
 
 ## Features
 
 - User authentication (JWT-based)
 - Task creation, assignment, and tracking
-- Kanban board and list view for task management
 - Real-time updates using Socket.io
 - Responsive UI built with Material-UI
 - Secure API endpoints
@@ -41,6 +39,7 @@ TMS (Task Management System) is a full-stack web application that enables users 
 
 - React.js
 - Redux Toolkit
+- RTK Query
 - Material-UI
 - React Router
 - WebSockets with socket.io-client
@@ -52,7 +51,7 @@ TMS (Task Management System) is a full-stack web application that enables users 
 Make sure you have the following installed:
 
 - Node.js (>= 16.x)
-- Yarn or npm
+- **Yarn** or npm
 - MongoDB (Local or Cloud-based, e.g., MongoDB Atlas)
 
 ### Clone the Repository
@@ -101,17 +100,6 @@ yarn dev  # or npm run dev
 cd client
 yarn start  # or npm start
 ```
-
-## API Endpoints
-
-| Method | Endpoint           | Description       |
-| ------ | ------------------ | ----------------- |
-| POST   | /api/auth/login    | User login        |
-| POST   | /api/auth/register | User registration |
-| GET    | /api/tasks         | Get all tasks     |
-| POST   | /api/tasks         | Create a new task |
-| PUT    | /api/tasks/\:id    | Update a task     |
-| DELETE | /api/tasks/\:id    | Delete a task     |
 
 ## Contributing
 
