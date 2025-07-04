@@ -1,0 +1,7 @@
+{
+  "watch": ["server/**/*"],
+  "ext": "js,json",
+  "ignore": ["node_modules", "public", ".git", "logs", "tmp"],
+  "verbose": true,
+  "legacyWatch": true
+}

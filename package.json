@@ -6,7 +6,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server/server.js",
-    "dev": "nodemon server/server.js --ignore './client'",
+    "dev": "nodemon server/server.js --legacy-watch --ignore './client'",
     "build": "yarn install && (cd client && yarn install && yarn build)"
   },
   "repository": "https://gitlab.com/kannanravindran.work/tms.git",
