@@ -3,6 +3,7 @@ import Sidenav from "../components/header/SideNav";
 import BottomTabs from "../components/bottom-tabs/BottomTabs";
 import { useLocation } from "react-router";
 import { useSelector } from "react-redux";
+import React from "react";
 
 export default function MainPageLayout() {
   const { user } = useSelector((state) => state.user);

@@ -1,4 +1,5 @@
-import { Typography, Box, Stack, CircularProgress } from "@mui/material";
+import React from "react";
+import { Typography, Box, Stack } from "@mui/material";
 
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft } from "@mui/icons-material";
@@ -11,9 +12,7 @@ import { addAllteamChat, otherTeamChat } from "../../app/features/chatSlice";
 function ChatRooms() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const { other_team_chats, all_team_chats } = useSelector(
-    (state) => state.chat
-  );
+  const { other_team_chats } = useSelector((state) => state.chat);
   const { user } = useSelector((state) => state.user);
   const getAllChats = async () => {
     try {

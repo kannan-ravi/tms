@@ -1,23 +1,17 @@
-import {
-  FiberManualRecord,
-  Logout,
-  NotificationsNone,
-} from "@mui/icons-material";
+import React from "react";
+import { FiberManualRecord, NotificationsNone } from "@mui/icons-material";
 import {
   Badge,
   Box,
   IconButton,
-  ListItemIcon,
   Menu,
   MenuItem,
   Typography,
 } from "@mui/material";
 import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import useSocket from "../../hooks/useSocket";
-import addNotification from "react-push-notification";
-import { Notifications } from "react-push-notification";
 import { environment } from "../../constants/environment";
 
 export default function NotificationDropDown() {
@@ -50,7 +44,6 @@ export default function NotificationDropDown() {
   }, [socketRef]);
 
   const handleNotificationSeen = (taskId, notificationId) => {
-
     navigate(`/individual-task/${taskId}`);
   };
   const fetchNotificaitons = async () => {

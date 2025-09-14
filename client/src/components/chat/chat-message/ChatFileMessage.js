@@ -6,7 +6,6 @@ import {
   fileNameExtractor,
   formatFileSize,
 } from "../../../constants/fileFunctions";
-import { environment } from "../../../constants/environment";
 import { toastSuccess } from "../../../app/features/toastSlice";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -44,16 +43,16 @@ export default function ChatFileMessage({ message, isSeen, time, priority }) {
     <Box>
       <Box px={0.5} py={0.5}>
         <Box px={1} py={0.5}>
-        {message?.sender?._id !== user?._id && (
-          <Typography
-            component="p"
-            variant="body2"
-            fontWeight="600"
-            width="max-content"
-          >
-            {message.sender.full_name}
-          </Typography>
-        )}
+          {message?.sender?._id !== user?._id && (
+            <Typography
+              component="p"
+              variant="body2"
+              fontWeight="600"
+              width="max-content"
+            >
+              {message.sender.full_name}
+            </Typography>
+          )}
         </Box>
         <Box
           bgcolor="rgba(255, 255, 255, 0.25)"

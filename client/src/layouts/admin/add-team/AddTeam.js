@@ -1,7 +1,7 @@
+import React from "react";
 import {
   Box,
   FormControl,
-  InputLabel,
   MenuItem,
   Select,
   Stack,
@@ -35,7 +35,7 @@ export default function AddTeam() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     if (input.name !== "" && input.team_chat !== "") {
       try {
         const response = await fetch(`${environment}/api/teams`, {

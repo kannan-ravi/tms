@@ -1,9 +1,9 @@
+import React from "react";
 import { Box, Slider, Stack, Typography } from "@mui/material";
 import {
   PlayArrow,
   Pause,
   DoneAll,
-  Circle,
   FiberManualRecord,
 } from "@mui/icons-material";
 
@@ -113,7 +113,13 @@ export default function ChatAudioMessage({ message, time, isSeen }) {
           }}
         />
       </Stack>
-      <Stack direction="row" gap={0.5} justifyContent="space-between" mt={0.5} pl={1}>
+      <Stack
+        direction="row"
+        gap={0.5}
+        justifyContent="space-between"
+        mt={0.5}
+        pl={1}
+      >
         <Stack direction="row" alignItems="center" gap={1}>
           <Typography component="p" variant="body2" fontSize="12px">
             {fileNameExtractor(message.file.file_format)}

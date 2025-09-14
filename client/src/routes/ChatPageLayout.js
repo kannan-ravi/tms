@@ -3,6 +3,7 @@ import ChatHeader from "../components/chat/header/ChatHeader";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFnsV3";
 import { useSelector } from "react-redux";
+import React from "react";
 
 export default function ChatPageLayout() {
   const { user } = useSelector((state) => state.user);

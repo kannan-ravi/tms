@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Add,
   CameraAltOutlined,
@@ -95,7 +96,7 @@ export default function ChatBottomInput({
     mediaRecorder.onstop = () => {
       const audioBlob = new Blob(chunks, { type: "audio/webm" });
 
-      const audioUrl = URL.createObjectURL(audioBlob);
+      // const audioUrl = URL.createObjectURL(audioBlob);
 
       handleSendAudio(audioBlob);
       setRecordingStatus("inactive");

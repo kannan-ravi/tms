@@ -1,10 +1,11 @@
+import React from 'react'
 import { DescriptionTwoTone, DoneAll } from "@mui/icons-material";
 import { Box, Stack, Typography } from "@mui/material";
 import { useState } from "react";
 import ChatBottomDrawer from "../bottom-drawer/ChatBottomDrawer";
 
 export default function ChatSentImage() {
-  const [isSeen, setIsSeen] = useState(true);
+  const isSeen = true;
   const [open, setOpen] = useState(false);
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);

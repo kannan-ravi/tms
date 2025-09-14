@@ -1,3 +1,4 @@
+import React from "react";
 import { createBrowserRouter } from "react-router-dom";
 import MainPageLayout from "./routes/MainPageLayout";
 import ChatPageLayout from "./routes/ChatPageLayout";

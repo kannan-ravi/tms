@@ -1,26 +1,20 @@
 import {
   Box,
   FormControl,
-  FormLabel,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
   MenuItem,
   Select,
   Stack,
   TextField,
   Typography,
 } from "@mui/material";
-import { useState } from "react";
+import React, { useState } from "react";
 import SubmitButton from "../../../components/ui/submit-button/SubmitButton";
-import { AddCircleOutlined, ArrowLeft, Image } from "@mui/icons-material";
+import { ArrowLeft } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { environment } from "../../../constants/environment";
 import { addSingleUser } from "../../../app/features/userSlice";
 import { toastError, toastSuccess } from "../../../app/features/toastSlice";
-import { formatFileSize } from "../../../constants/fileFunctions";
 
 export default function AddUser() {
   const navigate = useNavigate();
@@ -35,7 +29,7 @@ export default function AddUser() {
     position: "",
     phone_number: "",
     team: "",
-    type: "user"
+    type: "user",
     // profile_image: null,
   });
 
@@ -268,9 +262,13 @@ export default function AddUser() {
                   onChange={handleOnChange}
                   name="type"
                 >
-                  {['Admin', 'User', 'Rep'].map((type) => (
+                  {["Admin", "User", "Rep"].map((type) => (
                     <MenuItem key={type} value={type.toLowerCase()}>
-                      {type === "User" ? "Team Player" : type === "Rep" ? "Team Head" : "Admin"}
+                      {type === "User"
+                        ? "Team Player"
+                        : type === "Rep"
+                        ? "Team Head"
+                        : "Admin"}
                     </MenuItem>
                   ))}
                 </Select>

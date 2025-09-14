@@ -1,3 +1,4 @@
+import React from "react";
 import { AddCircleOutlined, Delete, Image } from "@mui/icons-material";
 import {
   Box,
@@ -15,7 +16,7 @@ import {
 } from "@mui/material";
 
 import { DatePicker, TimePicker } from "@mui/x-date-pickers";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import CustomSelect from "../../components/ui/custom-select/CustomSelect";
 import SubmitButton from "../../components/ui/submit-button/SubmitButton";
@@ -81,10 +82,12 @@ export default function CreateTask() {
   const handleFileDelete = (fileName) => {
     setTaskData((prevState) => ({
       ...prevState,
-      tasks_images: prevState.tasks_images.filter((file) => file.name !== fileName),
+      tasks_images: prevState.tasks_images.filter(
+        (file) => file.name !== fileName
+      ),
     }));
   };
-  
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 

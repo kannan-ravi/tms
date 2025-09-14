@@ -1,12 +1,6 @@
-import { DescriptionTwoTone, DoneAll, Lock } from "@mui/icons-material";
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import { useState } from "react";
 import ChatBottomDrawer from "../bottom-drawer/ChatBottomDrawer";
-import {
-  fileFormatExtractor,
-  fileNameExtractor,
-  formatFileSize,
-} from "../../../constants/fileFunctions";
 import { useSelector } from "react-redux";
 import ChatTextMessage from "./ChatTextMessage";
 import ChatFileMessage from "./ChatFileMessage";
@@ -15,7 +9,7 @@ import ChatMediaMessage from "./ChatMediaMessage";
 import ChatAudioMessage from "./ChatAudioMessage";
 
 export default function ChatMessage({ message, time, type }) {
-  const [isSeen, setIsSeen] = useState(true);
+  const isSeen = true;
   const [open, setOpen] = useState(false);
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);

@@ -1,9 +1,7 @@
-import { useState } from "react";
-import Tabs from "@mui/material/Tabs";
+import React, { useState } from "react";
 import Tab from "@mui/material/Tab";
 
 import { useDispatch, useSelector } from "react-redux";
-import { BottomFixed } from "../../assets/styledComponent/Style";
 import {
   BottomNavigation,
   BottomNavigationAction,
@@ -12,23 +10,8 @@ import {
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
-import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
-import Groups3Icon from "@mui/icons-material/Groups3";
-import PersonIcon from "@mui/icons-material/Person";
-import {
-  AccountBox,
-  ChatBubble,
-  Home,
-  Group,
-  Restore,
-} from "@mui/icons-material";
+import { AccountBox, ChatBubble, Home, Group } from "@mui/icons-material";
 import { toastError } from "../../app/features/toastSlice";
-
-const CustomTab = styled(Tab)(({ theme }) => ({
-  padding: theme.spacing(1, 2),
-  background: "white",
-  width: "100%",
-}));
 
 export default function BottomTabs() {
   const [value, setValue] = useState(0);
