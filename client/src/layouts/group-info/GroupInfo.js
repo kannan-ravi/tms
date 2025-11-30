@@ -2,11 +2,8 @@ import { Box } from "@mui/material";
 import React from "react";
 import ListItem from "../../components/chat-info/list-item/ListItem";
 import ChatInfoHeader from "../../components/chat-info/info-header/ChatInfoHeader";
-import { useParams } from "react-router-dom";
-import { useSelector } from "react-redux";
 
 export default function GroupInfo() {
-  const { chat } = useSelector((state) => state.chat);
   const listData = [
     {
       title: "Meeting Scheduled",

@@ -5,7 +5,7 @@ import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { environment } from "../../../constants/environment";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { setChatInfo } from "../../../app/features/chatSlice";
 
 export default function ChatHeader() {

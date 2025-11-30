@@ -1,9 +1,6 @@
+import React from "react";
 import {
   Box,
-  FormControl,
-  InputLabel,
-  MenuItem,
-  Select,
   Stack,
   TextField,
   Typography,
@@ -12,7 +9,7 @@ import { useEffect, useState } from "react";
 import SubmitButton from "../../../components/ui/submit-button/SubmitButton";
 import { ArrowLeft } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { environment } from "../../../constants/environment";
 import { addAllteamChat } from "../../../app/features/chatSlice";
 import { addAllUsers } from "../../../app/features/userSlice";
@@ -23,7 +20,6 @@ export default function AddChat() {
   const dispatch = useDispatch();
   const [selectedChat, setSelectedChat] = useState([]);
 
-  const { allUsers } = useSelector((state) => state.user);
   const [input, setInput] = useState({
     name: "",
     users: selectedChat,
@@ -31,15 +27,6 @@ export default function AddChat() {
 
   const handleOnChange = (e) => {
     setInput({ ...input, [e.target.name]: e.target.value });
-  };
-  const handleChatChange = (e) => {
-    const selectedValues = e.target.value;
-    setSelectedChat(selectedValues);
-
-    setInput((prevInput) => ({
-      ...prevInput,
-      users: selectedValues,
-    }));
   };
 
   const handleSubmit = async (e) => {

@@ -37,22 +37,6 @@ export default function AddUser() {
     setUserData({ ...userData, [e.target.name]: e.target.value });
   };
 
-  const handleFileUpload = (e) => {
-    const file = e.target.files[0]; // Get the selected file
-
-    if (file) {
-      setUserData((prevState) => ({
-        ...prevState,
-        profile_image: file, // Set to the selected file
-      }));
-    } else {
-      setUserData((prevState) => ({
-        ...prevState,
-        profile_image: null, // No file selected, set back to null
-      }));
-    }
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -98,12 +82,6 @@ export default function AddUser() {
       console.error("Error during registration:", error);
       dispatch(toastError("Something Went Wrong"));
     }
-  };
-
-  const fileName = {
-    fontSize: "0.9rem",
-    wordBreak: "break-word",
-    overflowWrap: "break-word",
   };
 
   return (

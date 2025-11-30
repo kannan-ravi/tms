@@ -8,7 +8,7 @@ import {
   Stack,
   TextareaAutosize,
 } from "@mui/material";
-import { useState } from "react";
+import React, { useState } from "react";
 import CustomSelect from "../../components/ui/custom-select/CustomSelect";
 import SubmitButton from "../../components/ui/submit-button/SubmitButton";
 

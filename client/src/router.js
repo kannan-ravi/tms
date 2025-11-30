@@ -1,11 +1,9 @@
-import React from "react";
 import { createBrowserRouter } from "react-router-dom";
 import MainPageLayout from "./routes/MainPageLayout";
 import ChatPageLayout from "./routes/ChatPageLayout";
 import AdminPageLayout from "./routes/AdminPageLayout";
 import ProtectedRoutes from "./routes/ProtectedRoutes";
-import { Suspense, lazy } from "react";
-import AdminProtectedRoutes from "./routes/AdminPageLayout";
+import React, { Suspense, lazy } from "react";
 import LazyLoader from "./components/ui/lazy-loader/LazyLoader";
 
 const Home = lazy(() => import("./layouts/home/Home"));

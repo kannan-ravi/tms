@@ -3,13 +3,10 @@ import { Box } from "@mui/material";
 import {
   ChecklistOutlined,
   CalendarMonthOutlined,
-  ScreenShareOutlined,
   ArticleOutlined,
   ImageOutlined,
   AudiotrackOutlined,
 } from "@mui/icons-material";
-
-import ChatDateBadge from "../../components/chat/date-badge/ChatDateBadge";
 
 import ChatMessage from "../../components/chat/chat-message/ChatMessage";
 
@@ -18,7 +15,7 @@ import ChatBottomInput from "../../components/chat/bottom-input/ChatBottomInput"
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { format } from "date-fns";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { environment } from "../../constants/environment";
 import { setMessages } from "../../app/features/messageSlice";
 

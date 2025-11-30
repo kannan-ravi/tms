@@ -3,7 +3,7 @@ import { Box } from "@mui/material";
 
 import ScheduledCard from "./ScheduledCard";
 import SheduleMeetingDrawer from "./SheduleMeetingDrawer";
-import { useState } from "react";
+import React, { useState } from "react";
 
 export default function ScheduleMeeting() {
   const [open, setOpen] = useState(false);

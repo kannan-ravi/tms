@@ -19,7 +19,6 @@ import { LineChart } from "@mui/x-charts/LineChart";
 function Profile() {
   const { user } = useSelector((state) => state.user);
   const navigate = useNavigate();
-  const [progress, setProgress] = useState(0);
   const [myTasks, setMyTasks] = useState({
     total_tasks: 0,
     completed_tasks: 0,

@@ -102,7 +102,7 @@ export default function AddCategory({ data, setTaskData, taskData, isEdit }) {
             ))
           ) : (
             <Box width="100%">
-              <Typography component="p" variant="overline" textAlign="center" width="100%">Category's Not Found</Typography>
+              <Typography component="p" variant="overline" textAlign="center" width="100%">Category&apos;s Not Found</Typography>
               <Typography component="p" variant="caption" textAlign="center" width="100%">You can add new category</Typography>
               
             </Box>

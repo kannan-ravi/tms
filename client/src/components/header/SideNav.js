@@ -12,19 +12,15 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import MailIcon from "@mui/icons-material/Mail";
 import MenuIcon from "@mui/icons-material/Menu";
-import Toolbar from "@mui/material/Toolbar";
 
 import { vAlign, spaceBtn } from "../../assets/styledComponent/Style";
-import Badge from "@mui/material/Badge";
 
-import { NotificationsNone } from "@mui/icons-material";
 
 import { useState } from "react";
 
 import AccountDropDown from "./AccountDropDown";
 import NotificationDropDown from "./NotificationDropDown";
 
-const drawerWidth = 240;
 
 export default function ResponsiveDrawer() {
   const [open, setOpen] = useState(false);

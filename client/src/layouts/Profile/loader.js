@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import CircularProgress from '@mui/material/CircularProgress';
 import Typography from '@mui/material/Typography';
@@ -38,6 +38,5 @@ CircularProgressWithLabel.propTypes = {
 };
 
 export default function CircularWithValueLabel() {
-  const [progress, setProgress] = React.useState(10);
   return <CircularProgressWithLabel value={45} />;
 }

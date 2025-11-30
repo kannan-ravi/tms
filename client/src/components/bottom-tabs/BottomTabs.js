@@ -1,12 +1,10 @@
 import React, { useState } from "react";
-import Tab from "@mui/material/Tab";
 
 import { useDispatch, useSelector } from "react-redux";
 import {
   BottomNavigation,
   BottomNavigationAction,
   Box,
-  styled,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 

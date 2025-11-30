@@ -1,8 +1,8 @@
 import { CheckCircle, Close, RadioButtonUnchecked } from "@mui/icons-material";
 import { Checkbox, FormControlLabel, Stack, Typography } from "@mui/material";
-import { useState } from "react";
+import React, { useState } from "react";
 
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { toastError } from "../../app/features/toastSlice";
 import { environment } from "../../constants/environment";
 

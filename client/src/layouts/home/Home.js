@@ -132,7 +132,7 @@ function Home() {
           {`Hello ${user?.full_name}`}
         </Typography>
         <Typography variant="caption" display="block" gutterBottom>
-          Let's finish your task today!
+          Let&apos;s finish your task today!
         </Typography>
       </Box>
 

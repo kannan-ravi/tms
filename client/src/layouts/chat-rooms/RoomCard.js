@@ -1,6 +1,6 @@
 import React from "react";
 import { ArrowRight, DoneAll } from "@mui/icons-material";
-import { Box, Stack, Typography } from "@mui/material";
+import {  Stack, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 
 export default function RoomCard({ chat }) {
