@@ -43,7 +43,7 @@ export default function NotificationDropDown() {
     };
   }, [socketRef]);
 
-  const handleNotificationSeen = (taskId, notificationId) => {
+  const handleNotificationSeen = (taskId) => {
     navigate(`/individual-task/${taskId}`);
   };
   const fetchNotificaitons = async () => {
@@ -122,7 +122,7 @@ export default function NotificationDropDown() {
         {notification.length > 0 ? (
           notification.map((data, index) => (
             <MenuItem key={index} sx={{ maxWidth: "400px", width: "100%" }}>
-              <Box onClick={() => handleNotificationSeen(data.task, data._id)}>
+              <Box onClick={() => handleNotificationSeen(data.task)}>
                 <Typography
                   component="p"
                   variant="body2"
