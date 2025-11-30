@@ -22,7 +22,9 @@ export default function ChatHeader() {
         (res) => res.json()
       );
       dispatch(setChatInfo(response));
-    } catch (error) {}
+    } catch (error) {
+      console.log(error); // Temporary Solution
+    }
   };
 
   useEffect(() => {
